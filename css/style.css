@@ -67,6 +67,53 @@ li {
     text-align: center;
 }
 
+.primary-color {
+    color: #23d789;
+}
+
+.button {
+    display: inline-block;
+    padding: 0;
+    font-size:14px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 44px;
+    height: 44px;
+    width: 220px;
+    color:#fff;
+    text-transform: uppercase;
+    border-radius: 22px;
+    background-color: #aaa;
+    border:1px solid #aaa;
+    margin-right: 10px;
+    -webkit-transition: all .9s ease-in;
+    transition: all .9s ease-in;
+}
+
+.button-primary {
+    background:linear-gradient(120deg, #23d789 0%,#23d789 50%,#92ffd0 50%,#92ffd0 53%,#32faa3 53%,#32faa3 53%);
+    background-size: 220%;
+    background-position: 0;
+    background-color: #23d789;
+}
+
+.button-primary:hover {
+    background-position: 100%;
+    background-color:#32faa3;
+}
+
+.button-secondry {
+    background:linear-gradient(120deg, #F62459 0%,#F62459 50%,rgb(224, 56, 98) 50%,rgb(224, 56, 98) 53%,rgb(245, 69, 113) 53%,rgb(245, 69, 113) 53%);
+    background-size: 220%;
+    background-position: 0;
+    background-color: #F62459;
+}
+
+.button-secondry:hover {
+    background-position: 100%;
+    background-color:rgb(252, 89, 130);
+}
+
 /*-----Header----*/
 
 header {
@@ -93,7 +140,18 @@ header .desktop-nav {
 
 .logo a img {
     width: 100%;
-    height: auto;
+    height: 70%;
+   border:2px solid #23d789;
+   border-radius: 20%;
+}
+
+.logo p {
+    color:#fff;
+    font-size:20px;
+}
+
+.header-text {
+    font-size:30px;
 }
 nav .nav {
     display: block;
@@ -114,6 +172,7 @@ nav ul li a {
     text-transform: uppercase;
     font-size:14px;
     padding:0 !important;
+    -webkit-transition:all 0.5s ease-in;
     transition:all 0.5s ease-in;
 }
 
@@ -143,6 +202,109 @@ nav ul li a:not(.social-links):hover {
     height: 100%;
     top: 0;
     left: 0;
-    line-height: 36px;
-  
+    line-height: 36px; 
+}
+
+/*------ Hero code -----*/
+.carousel-item {
+    height: 100vh;
+}
+.carousel-item .h100 {
+    height: 100vh;
+    
+}
+
+#hero-slider .slider1 {
+    background:-webkit-gradient(linear,
+    left top, left bottom,
+    from(rgba(0,0,0,0.95)),
+    color-stop(12%, rgba(0,0,0,0.8)),
+    to(rgba(0,0,0,0.5))),url("../img/bg1.jpg");
+    background:linear-gradient(to bottom,
+    rgba(0,0,0,0.95)0%,
+    rgba(0,0,0,0.8)12%,
+    rgba(0,0,0,0.5)100%),url("../img/bg1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#hero-slider .slider2 {
+    background:-webkit-gradient(linear,
+    left top, left bottom,
+    from(rgba(0,0,0,0.95)),
+    color-stop(12%, rgba(0,0,0,0.8)),
+    to(rgba(0,0,0,0.5))),url("../img/bg2.png");
+    background:linear-gradient(to bottom,
+    rgba(0,0,0,0.95)0%,
+    rgba(0,0,0,0.8)12%,
+    rgba(0,0,0,0.5)100%),url("../img/bg2.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+#hero-slider .slider3 {
+    background:-webkit-gradient(linear,
+    left top, left bottom,
+    from(rgba(0,0,0,0.95)),
+    color-stop(12%, rgba(0,0,0,0.8)),
+    to(rgba(0,0,0,0.5))),url("../img/bg3.jpg");
+    background:linear-gradient(to bottom,
+    rgba(0,0,0,0.95)0%,
+    rgba(0,0,0,0.8)12%,
+    rgba(0,0,0,0.5)100%),url("../img/bg3.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.slide-left h1,
+.slide-left p {
+    color:#fff;
+}
+
+.slide-left h1 {
+    font-size:39px;
+    margin-bottom: 10px;
+}
+
+.slide-left p {
+    font-size:18px;
+    margin-bottom: 20px;
+}
+
+.cta {
+    margin-top: 40px;
+}
+
+.hero-img img {
+    position: absolute;
+    max-width: 100%;
+    max-height: 88vh;
+    right: 0;
+    bottom: 0;
+}
+
+#hero-slider .carousel-indicators {
+    margin-left:0;
+    width:-webkit-fit-content;
+    width:-moz-fit-content;
+    width:fit-content;
+    top: calc(100vh - 70px);
+}
+
+#hero-slider .carousel-indicators li {
+    width:9px;
+    height:9px;
+    margin-left: 0px;
+    margin-right: 14px;
+    border-radius: 50%;
+    background-color:#fff;
+    transition: all 0.2s ease;
+}
+
+#hero-slider .carousel-indicators li.active {
+    background-color: #23d789;
 }
